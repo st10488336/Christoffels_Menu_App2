@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-nati
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList, MenuItem, Course } from '../types/navigation';
 
+
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'> & {
   items: MenuItem[];
 };
@@ -36,7 +37,10 @@ const HomeScreen: React.FC<Props> = ({ navigation, items }) => {
   return (
     
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Christoffel's Menu</Text>
+    <View>
+      
+        
+      <Text style={styles.title}>WELCOME TO CHRISTOFFEL'S MENU</Text>
 
       <View style={styles.card}>
         <Text style={styles.stat}>Total items: {totalItems}</Text>
@@ -48,6 +52,7 @@ const HomeScreen: React.FC<Props> = ({ navigation, items }) => {
               {c}: {countsByCourse[c]} item(s) — average ${averageByCourse[c].toFixed(2)}
             </Text>
           ))}
+        </View>
         </View>
       </View>
 
@@ -81,5 +86,10 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     alignItems: 'center',
   },
-  buttonText: { color: '#fff', fontWeight: '700' },
+   buttonText: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+ 
 });

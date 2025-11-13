@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity, FlatList, StyleSheet } from 'react-native
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList, MenuItem, Course } from '../types/navigation';
 
+
 type Props = NativeStackScreenProps<RootStackParamList, 'FilterMenu'> & {
   items: MenuItem[];
 };

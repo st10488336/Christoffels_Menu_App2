@@ -7,11 +7,17 @@ import AddMenuItemScreen from './screens/AddMenuItemScreen';
 import MenuScreen from './screens/MenuScreen';
 import FilterMenuScreen from './screens/FilterMenuScreen';
 import { RootStackParamList, MenuItem } from './types/navigation';
+  
+
+  
+
+  
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
+  
   
   const [items, setItems] = useState<MenuItem[]>([
   
